@@ -1,0 +1,25 @@
+.ul {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+.li {
+    border:solid 3px #000;
+    margin: 3px auto;
+    padding: 3px;
+}
+.name {
+    position: relative;
+    font-size:18px;
+    border-bottom: solid 1px #000;
+    margin-bottom: 10px;
+}
+.link {
+    clear: left;
+}
+
+#labo{
+    height: 40px;
+    border-bottom: solid 3px #000;
+    font-size:20px;
+}

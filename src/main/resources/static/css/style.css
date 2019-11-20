@@ -1,0 +1,61 @@
+
+.topname{
+    margin:0;
+    text-align: right;
+}
+.main {
+    display: block;
+    width: 660px;
+    height: 100%;
+    margin-right: 20px;
+    background-color: #ddd;
+}
+.sidebar {
+    width: 320px;
+}
+.sidebar__item {
+    background-color: #ddd;
+    margin-bottom: 20px;
+    height: 320px;
+}
+.sidebar__item--fixed {
+    background-color: #e4b6b6;
+    position: sticky;
+    margin-bottom: 0;
+    top: 10px;
+    z-index: 1;
+}
+
+#pagebody {
+    width: 1000px;
+}
+#header {
+    height:80px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+#header a {
+    margin-top:20px;
+    font-size:30px;
+    font-family: "MS 明朝",sans-serif;
+}
+#header .logo {
+    margin-top: 10px;
+    border:0;
+    width:60px;
+    height:60px;
+    float:left;
+}
+#header .login {
+    background-color: #dddddd;
+    margin-top:20px;
+    border:0;
+    width: 90px;
+    height: 40px;
+    float:right;
+}
+#container {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 20px;
+}

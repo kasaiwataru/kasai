@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"></link>
+    <link href="../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet"></link>
+    <meta charset="UTF-8">
+    <title>公立千歳科学技術大学 研究室紹介</title>
+</head>
+<body>
+<div id="pagebody">
+    <div id="topname"><a>ようこそ<a href="login.html">ゲスト</a>さん</a></div>
+    <div id="header">
+        <img border="0" src="../static/images/logo.png" th:src="@{/images/logo.png}" width="80px" height="80px" class="logo">
+        <a>公立千歳科学技術大学 研究室紹介</a>
+        <button type="button" class="login">ログイン</button>
+    </div>
+
+    <div id="container">
+        <div class="main">
+            <p>研究室一覧</p>
+            <div class="gakka">応用化学生物学科</div>
+            <div class="ul" th:each="ri:${classA}">
+                <div class="li">
+                    <div class="laboname">[[${ri.laboName}]]</div>
+                    <img class="profimg" th:src="@{${ri.img}}">
+                    <div class="about"><a>[[${ri.about}]]</a></div>
+                    <div class="link"><a href="/labo.html" th:href="@{${ri.laboId}}">詳細</a>へ</div>
+                </div>
+            </div>
+            <div class="gakka">電子光工学科</div>
+            <div class="ul" th:each="ri:${classB}">
+                <div class="li">
+                    <div class="laboname">[[${ri.laboName}]]</div>
+                    <img class="profimg" th:src="@{${ri.img}}">
+                    <div class="about"><a>[[${ri.about}]]</a></div>
+                    <div class="link"><a href="/labo.html" th:href="@{${ri.laboId}}">詳細</a>へ</div>
+                </div>
+            </div>
+            <div class="gakka">情報システム工学科</div>
+            <div class="ul" th:each="ri:${classC}">
+                <div class="li">
+                    <div class="laboname">[[${ri.laboName}]]</div>
+                    <img class="profimg" th:src="@{${ri.img}}">
+                    <div class="about"><a>[[${ri.about}]]</a></div>
+                    <div class="link"><a href="/labo.html" th:href="@{${ri.laboId}}">詳細</a>へ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar__item">
+                <p>お知らせ</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

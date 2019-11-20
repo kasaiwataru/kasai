@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"></link>
+    <link href="../static/css/index.css" th:href="@{/css/labo.css}" rel="stylesheet"></link>
+    <meta charset="UTF-8">
+    <title>公立千歳科学技術大学 研究室紹介</title>
+</head>
+<body>
+<div id="pagebody">
+<div id="topname"><a>ようこそ<a href="login.html">ゲスト</a>さん</a></div>
+<div id="header">
+    <img border="0" src="../static/images/logo.png" th:src="@{/images/logo.png}" width="80px" height="80px" class="logo">
+    <a>公立千歳科学技術大学 研究室紹介</a>
+    <button type="button" class="login">ログイン</button>
+</div>
+
+<div id="container">
+    <div class="main">
+        <div id="labo">
+            <p>[[${laboname}]]</p>
+        </div>
+        <div class="ul" th:each="ri:${students}">
+            <div class="li">
+                <div class="name">[[${ri.name}]]</div>
+                <div class="link"><a href="/labo.html" th:href="@{students/${ri.studentId}}">詳細</a>へ</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
