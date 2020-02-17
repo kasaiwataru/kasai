@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import sys
+import zlib
+
+if len(sys.argv) != 2:
+	print("usage: %s <disk_name>" % sys.argv[0])
+	sys.exit(1)
+
+crc = zlib.crc32(sys.argv[1].encode("UTF-8")) & 0xffffffff
+crc = str(hex(crc))[2:]
+print("52:54:%s%s:%s%s:%s%s:%s%s" % tuple(crc))
+
